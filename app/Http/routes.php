@@ -11,11 +11,20 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', function()
+{
+	return Redirect::route('projets.index');
+});
 
-Route::get('home', 'HomeController@index');
+Route::resource('projets', 'ProjetsController');
+Route::resource('projets.taches', 'TachesController');
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+Route::model('projets', 'App\Projet', function()
+{
+	abort(404);
+});
+
+Route::model('taches', 'App\Tache', function()
+{
+	abort(404);
+});

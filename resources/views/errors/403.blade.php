@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('titre')
-Erreur 503
+Accès refusé
 @stop
 
 @section('contenu')
@@ -9,8 +9,8 @@ Erreur 503
     <div class="panel panel-default">
         <div class="panel-body">
             <div class="table-responsive">
-               <p>Application en maintenance. Réessayez plus tard ou contactez le support.
-               </p>
+               <h1>Accès refusé</h1>
+               <p>Connectez-vous pour accéder à cette page.</p>
            </div>
            <!-- /.table-responsive -->
        </div>
